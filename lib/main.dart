@@ -1,21 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_2/my_container.dart';
 
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override 
-  Widget build (BuildContext context) {
-    return const MaterialApp(
-      title: 'My Flutter Sample',
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello Word'),
-        ),
-      ),
-    );
-  }
+  runApp(const MyContainer());
 }
