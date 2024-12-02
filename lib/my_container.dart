@@ -45,7 +45,8 @@ class MyContainer extends StatelessWidget {
       fontSize: 35,
       fontWeight: FontWeight.bold,
       color: Colors.white,
-    ),),
+    ),
+    ),
   );
 
   Widget container1() => Container(
