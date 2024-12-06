@@ -5,13 +5,13 @@ class MyContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context){
-    return  MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Using Container',
       home: Scaffold(
         appBar: AppBar(
           backgroundColor:  Colors.amber[900],
-          title: const Text(' เเอปของนายภวัฒ'),
+          title: const Text('เเอปของนายภวัฒ'),
           centerTitle: true,
         ),
         body: Center(
@@ -53,11 +53,12 @@ class MyContainer extends StatelessWidget {
           color: Colors.black12,
           height: 300,
           width: 300,
-          margin: const EdgeInsets.all(60),
-          padding: const EdgeInsets.only(left: 60, top: 100),
-          child: const Text("ฮัลโล๋เวลคัม" , 
+          margin: const EdgeInsets.all(50),
+          padding: const EdgeInsets.only(left: 0, top: 100),
+          child: const Text("ฮัลโล๋เวลคัม" ,
+          textAlign: TextAlign.center,
           style: TextStyle(fontSize: 35,
-                 fontWeight: FontWeight.bold),
+          fontWeight: FontWeight.bold),
         ),
   );
 }
