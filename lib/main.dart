@@ -5,6 +5,7 @@ import 'package:flutter_2/work_widget.dart';
 
 void main() {
   runApp( const MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: WyWidgetWork(),
   ));
 }
