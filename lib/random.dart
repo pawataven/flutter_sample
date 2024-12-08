@@ -14,7 +14,7 @@ class _RandomnumberState extends State<Randomnumber> {
   int ranNum = 0;
   String txtInput = '';
   String _number = '';
-  final _ctrl = TextEditingController();
+  var _ctrl = TextEditingController();
   int x = 0, y = 0;
 
   @override
@@ -42,62 +42,58 @@ class _RandomnumberState extends State<Randomnumber> {
     );
   }
 
-  Widget container_textfield() => Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TextField(
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontSize: 20,
-              ),
-              controller: _ctrl,
-              onChanged: (text) => _number = _ctrl.value.text,
-            ),
-            Text(
-              txtInput,
-              style: const TextStyle(
-                fontSize: 16,
-              ),
-            ),
-          ],
+  Widget container_textfield() => Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      TextField(
+        textAlign: TextAlign.center,
+        style: const TextStyle(
+          fontSize: 20,
         ),
-      );
+        controller: _ctrl,
+        onChanged: (text) => _number = _ctrl.value.text,
+      ),
+      Text(
+        txtInput,
+        style: const TextStyle(
+          fontSize: 16,
+        ),
+      ),
+    ],
+  );
 
-  Widget container_button() => Container(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TextButton(
-                onPressed: () {
-                  checkNum();
-                },
-                child: const Text(
-                  'กดส่งคำตอบ',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black,
-                    backgroundColor: Colors.orangeAccent,
-                  ),
-                )),
-            TextButton(
-                onPressed: () {
-                  setState(() {
-                    Randomnumber();
-                    txtInput = "ใส่ตัวเลข 1-9 เพื่อคาดเดา";
-                  });
-                },
-                child: const Text(
-                  "เริ่มต้นใหม่",
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black,
-                    backgroundColor: Colors.redAccent,
-                  ),
-                ))
-          ],
-        ),
-      );
+  Widget container_button() => Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      TextButton(
+          onPressed: () {
+            checkNum();
+          },
+          child: const Text(
+            'กดส่งคำตอบ',
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.black,
+              backgroundColor: Colors.orangeAccent,
+            ),
+          )),
+      TextButton(
+          onPressed: () {
+            setState(() {
+              Randomnumber();
+              txtInput = "ใส่ตัวเลข 1-9 เพื่อคาดเดา";
+            });
+          },
+          child: const Text(
+            "เริ่มต้นใหม่",
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.black,
+              backgroundColor: Colors.redAccent,
+            ),
+          ))
+    ],
+  );
 
   void checkNum() {
     txtInput = 'เดาตัวเลข 1 - 9';
