@@ -14,7 +14,7 @@ class _RandomnumberState extends State<Randomnumber> {
   int ranNum = 0;
   String txtInput = '';
   String _number = '';
-  var _ctrl = TextEditingController();
+  final _ctrl = TextEditingController();
   int x = 0, y = 0;
 
   @override
