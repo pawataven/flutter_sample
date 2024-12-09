@@ -42,9 +42,7 @@ class MyGridPage extends StatelessWidget {
             size: 22,
             color: Colors.white,
           ),
-          onTap: () {
-
-          },        
+          onTap: () => myAlert (ctx,"คุณได้ทำการเปิดดูสินค้า ลำดับที่ => ${index}"),        
           ),
       ),
 
@@ -52,5 +50,19 @@ class MyGridPage extends StatelessWidget {
       fit: BoxFit.cover,
       ),    
       );
+  }
+
+  void myAlert(BuildContext ctx, String txt){
+    showDialog(
+      context: ctx, 
+    builder: (ctx) => AlertDialog(
+      content: Text(txt),
+      actions: [
+        TextButton(
+        onPressed: () => Navigator.of(ctx).pop(), 
+        child: const Text("ตกลง"),
+        ),
+      ],
+    ),);
   }
 }
