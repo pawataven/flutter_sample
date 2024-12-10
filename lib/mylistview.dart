@@ -71,7 +71,7 @@ class _MyListviewPageState extends State<MyListviewPage> {
         ),),
         
          InkWell(
-          child: Icon(Icons.shopping_cart),
+          child: const Icon(Icons.shopping_cart),
           onTap:()=>myAlert(ctx, 'ได้หยิบ ${titleText[index]} ใส่รถเข็นแล้ว') ,      
           ),
         ];

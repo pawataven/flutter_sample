@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class MyGridPage extends StatelessWidget {
   const MyGridPage({super.key});
@@ -42,7 +41,7 @@ class MyGridPage extends StatelessWidget {
             size: 22,
             color: Colors.white,
           ),
-          onTap: () => myAlert (ctx,"คุณได้ทำการเปิดดูสินค้า ลำดับที่ => ${index}"),        
+          onTap: () => myAlert (ctx,"คุณได้ทำการเปิดดูสินค้า ลำดับที่ => $index"),        
           ),
       ),
 
