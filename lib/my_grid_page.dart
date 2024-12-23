@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 
@@ -28,8 +27,6 @@ class MyGridPage extends StatelessWidget {
   );
 
   Widget buildGridTile (BuildContext ctx, int index){
-    var rnd = Random();
-
     return GridTile(
       footer: GridTileBar(
         backgroundColor: const Color.fromARGB(255, 143, 140, 131),
