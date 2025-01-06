@@ -9,7 +9,7 @@ class Help extends StatelessWidget {
       appBar: AppBar(title: const Text("help"),),
       body: const Center(child: Column(children: [
         SizedBox(height: 30,),
-        Text("heelp page")
+        Text("help page")
       ],),),
     );
   }
