@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 
@@ -85,7 +84,7 @@ class ProductDetail extends StatelessWidget {
                   foregroundColor: Colors.deepOrange,
                 ),
                 onPressed: () {
-                  Navigator.pop(
+                  Navigator.pop,(
                     context,
                     '/',
                   );
