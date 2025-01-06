@@ -61,7 +61,7 @@ class _MainPageState extends State<MainPage> {
 
   List<BottomNavigationBarItem> btnNavItem() {
     var iconItem = [Icons.home, Icons.shopping_cart, Icons.person, Icons.help];
-    var labelItem = ['Home', 'Product', 'Member', 'Hele'];
+    var labelItem = ['Home', 'Product', 'Member', 'Help'];
     var bgColorItem = [
       Colors.deepPurple,
       Colors.indigo,
