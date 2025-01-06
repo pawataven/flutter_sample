@@ -1,5 +1,10 @@
+import 'package:button_app/help.dart';
+import 'package:button_app/member.dart';
+import 'package:button_app/member_login.dart';
+import 'package:button_app/product.dart';
+import 'package:button_app/productdetail.dart';
 import 'package:flutter/material.dart';
-
+import 'package:button_app/homepage.dart';
 void main() {
   runApp(const MainApp());
 }
@@ -26,6 +31,8 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int _navItemIndex = 0; //ลำดัยที่ของปุ่มที่เลือก
 
+  var pages = <Widget> [const Homepage(), const Product(), const Productdetail(), const member(), const Help(), const Memberlogin()];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +40,7 @@ class _MainPageState extends State<MainPage> {
         title: const Text('BottomNavigaionBar'),
         centerTitle: true,
       ),
-      body: null,
+      body: pages[_navItemIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.deepPurple, //สีพื้นหลัง
